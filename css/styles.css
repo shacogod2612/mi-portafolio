@@ -405,52 +405,74 @@ body {
 
 /* 7. Footer */
 
-footer { 
-    padding: 5rem 10%; 
+/* =========================================
+   FOOTER: Redes Sociales V2 (Jackson Vega)
+   ========================================= */
+
+.footer-impact { 
+    padding: 2rem 10%; 
     text-align: center; 
     border-top: 1px solid #30363D;
     background-color: var(--bg-color);
 }
 
-footer h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-impact h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
     font-weight: 800;
+    line-height: 1.2;
 }
 
-.email-link { 
-    font-size: 2rem; 
-    color: var(--accent-color); 
-    text-decoration: none; 
-    font-weight: 700; 
-    display: inline-block; /* Cambiado a inline-block para mejor control */
-    margin: 2rem 0; 
-    transition: var(--transition);
-    word-break: break-all; /* Evita que el correo rompa el diseño en móviles */
+.footer-impact .highlight {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
-
-.email-link:hover {
-    transform: translateY(-3px);
-    text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-}
-
-.socials { 
+/* --- Estilos de Iconos Sociales V2 --- */
+.socials-v2 { 
     display: flex; 
     justify-content: center; 
-    gap: 2rem; 
-    margin-top: 1rem;
+    gap: 1.5rem; 
+    margin-top: 3rem;
+    flex-wrap: wrap;
 }
 
-.socials a { 
+.social-icon { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #161B22; /* Fondo de tarjeta sutil */
+    border: 1px solid #30363D;
     text-decoration: none; 
-    color: var(--text-dim); 
-    font-weight: 500; 
-    font-size: 1.1rem;
     transition: var(--transition);
 }
 
-.socials a:hover { 
-    color: var(--accent-color); 
+/* El icono Font Awesome dentro */
+.social-icon i { 
+    color: var(--text-dim); 
+    font-size: 2rem; 
+    transition: var(--transition);
+}
+
+/* EFECTOS HOVER (Brillo y Color de Marca) */
+.social-icon:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.social-icon:hover i { 
+    color: var(--accent-color); /* Todos se vuelven cian */
 }
 /* =========================================
    RESPONSIVE DESIGN (Tablet y Móvil)
@@ -553,26 +575,8 @@ footer h2 {
 .projects-grid-container { padding: 4rem 5%; }
     .bento-grid-proyectos { gap: 20px; }
     .project-card-bento h3 { font-size: 1.5rem; }
-    footer {
-        padding: 3rem 5%;
-    }
-    footer h2 {
-        font-size: 1.7rem;
-    }
-    .email-link {
-        font-size: 1.2rem; /* Tamaño seguro para que el correo no se corte */
-        margin: 1.5rem 0;
-    }
-    .socials {
-        flex-direction: column; /* Redes sociales una encima de otra para mejor clic */
-        gap: 1.2rem;
-    }
-    .socials a {
-        font-size: 1rem;
-        background: rgba(255, 255, 255, 0.05); /* Un pequeño fondo para que parezcan botones */
-        padding: 10px;
-        border-radius: 8px;
-    }
+   .footer-impact { padding: 5rem 5%; }
+    .footer-impact h2 { font-size: 2rem; }
 }    
 
 
@@ -599,4 +603,15 @@ footer h2 {
     .logo-text {
         font-size: 1rem; /* Nombre en la nav más pequeño */
     }
+    .email-link { font-size: 1.3rem; }
+    .social-icon { width: 50px; height: 50px; }
+    .social-icon i { font-size: 1.5rem; }
+    .socials-v2 { gap: 1rem; }
+}
+
+.copyright {
+    margin-top: 5rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 400;
 }
